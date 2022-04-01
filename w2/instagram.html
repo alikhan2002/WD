@@ -1,0 +1,189 @@
+<html>
+    <head>
+        <title>instagram</title>
+        <style>
+        body{
+            background-color:rgb(250,250,250);
+        }
+        #instagram{
+            width: 200px;
+            margin: auto;
+            padding: 30px;
+            display: block;
+        }
+        #appstore{
+            width: 150px;
+            position: absolute;
+            left:980px;
+            bottom: 90px;
+
+        }
+        #playmarket{
+            width: 150px;
+            position: absolute;
+            left:1150px;
+            bottom: 90px;
+        }
+        #iphone{
+            width: 25%;
+            position: absolute;
+            left:500px;
+            top:82px;
+        }
+        input[type="text"] {
+            display: block;
+            margin: auto;
+            margin-top:8px;
+            /* margin-top:0px; */
+            /* padding-left: 10px; */
+            border:1px solid rgb(223,223,223);
+            width: 300px;
+            height: 38px;
+            padding: 0px 0px 0px 10px;
+            border-radius: 5px;
+        }
+        input[type="password"]{
+            display: block;
+            margin: auto;
+            margin-top:-12px;
+            width: 300px;
+            height: 38px;
+            padding: 0px 0px 0px 10px;
+            border:1px solid rgb(223,223,223);
+            border-radius: 5px;
+        }   
+        button{
+            display: block;
+            border: 1px solid rgb(223,223,223);
+            background-color: rgb(0,149,246);
+            width:300px;
+            margin:auto;
+            color:white;
+            height: 35px;
+            border-radius: 5px;
+            font-size: 15px;
+            font-weight: 540;
+        }
+        
+        .upper{
+            position: absolute;
+            width: 390px;
+            height: 420px;
+            top:100px;
+            left:950px;
+            border: 1px solid rgb(223,223,223);
+            background-color: white;
+        }
+        .lower{
+            position: absolute;
+            width: 390px;
+            height: 65px;
+            border: 1px solid rgb(223,223,223);
+            background-color: white;
+            /* margin-top: 300px; */
+            top: 540px;
+            left:950px
+        }
+        .line{
+            border-top:1px solid rgb(223,225,229);
+            width: 30%;
+            position: absolute;
+            top:68.5%;
+            left: 46px;
+        }
+        .lineR{
+            border-top:1px solid rgb(223,225,229);
+            position: absolute;
+            top: 68.5%;
+            width: 30%;
+            left: 58%;
+        }
+        #or{
+            position:relative;
+            color:#999;
+            font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+            font-size: 13px;
+            /* top:0px; */
+            text-align: center;
+        }
+        
+        #f_pass{
+            color: rgb(0,55,107);
+            position: absolute;
+            text-decoration: none;
+            font-size: 16.5px;
+            font-family: Open Sans, sans-serif;
+            /* margin:auto; */
+            font-weight: 400;
+            font-size: 13px;
+            left: 145px;
+            margin-top:50px;
+        }
+        #via_facebook{
+            color:rgb(69,98,151);
+            position: absolute;
+            margin-top: 15px;
+            font-family: Open Sans, sans-serif;
+            text-decoration:none;
+            margin-left:125px;
+            font-weight: bold;
+            font-size:15px
+;
+        }
+        #facebook{
+            width: 19px;
+            position:absolute;
+            margin-top: 14px;
+            left:100px
+        }
+        #account{
+            text-decoration: none;
+            position: absolute;
+            font-family: Open Sans, sans-serif;
+            font-size:14px;
+            left:40px;
+            top:8px;
+        }
+        #reg{
+            text-decoration: none;
+            color:rgb(0,149,246);
+        }
+        #download{
+            position: absolute;
+            font-family: Open Sans, sans-serif;
+            bottom: 140px;
+            left:1060px;
+            font-size: 15px;
+        }
+        </style>
+
+    </head>
+
+    <body>
+        <img id="iphone"src="images/instagram/Снимок экрана 2022-02-09 222512.png" alt="iphone">
+        <div class="upper">
+            <form action="">
+                <img id="instagram"src="images/instagram/instagram.png" alt="instagram">
+                <input type="text" placeholder="Телефон, имя пользователя или эл.адрес"><br>
+                <input type="password" placeholder="Пароль"><br>
+                <button>Войти</button>
+                <div class="line"></div>
+                <p id="or">ИЛИ</p>
+                <div class="lineR"></div>
+                <img id="facebook"src="images/facebook/facebook.png" alt="facebook">
+                <a id="via_facebook"href="">Войти через Facebook</a><br>
+                <a id="f_pass"href="https://www.instagram.com/accounts/password/reset/">Забыли пароль?</a>
+            </form>
+    </div>
+        <div class="lower">
+            <form action="">
+                <span id="account"><p>У вас ещё нет аккаунта? <a id="reg" href="https://www.instagram.com/accounts/emailsignup/">Зарегистрироваться</a></p></span>
+            </form>
+        </div>
+        <p id="download">Установите приложение.</p>
+        <img id="appstore" src="https://www.instagram.com/static/images/appstore-install-badges/badge_ios_english-en.png/180ae7a0bcf7.png" alt="appstore">
+        <img id="playmarket"src="https://www.instagram.com/static/images/appstore-install-badges/badge_android_english-en.png/e9cd846dc748.png" alt="playmarket">
+
+    </body>
+
+</html>

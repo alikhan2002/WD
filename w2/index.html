@@ -1,0 +1,140 @@
+<html>
+<head>
+    <title>Facebook</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="images/facebook/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/facebook/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/facebook/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <!-- <link rel="shortcut icon" type="image/png" href="images/facebook/favicon.png"> -->
+    <style>
+        form{
+            background-color: white;
+            position: absolute;
+            width: 396px;
+            height: 325px;
+            padding: 10px 5px 10px 10px;
+            margin: -30vh 800px;
+            border: 1.5px rgb(2, 3, 4);
+            text-align: center;
+            border-radius:10px ;
+            box-shadow: 4px 5px 30px -5px rgb(144, 150, 150);
+        }
+        input[type="text"], input[type="password"] {
+            display: block;
+            background-color: rgb(255, 255, 255);
+            width: 380px;
+            padding: 15px 15px ;
+            margin:auto;
+            border: 2px solid rgb(240, 237, 237);
+            border-radius: 5px;
+            font-size: 18px;
+        }
+        button{
+            border: none;
+            background-color: rgb(24,119,242);
+            width: 380px;
+            height: 48px;
+            color:white;
+            margin: auto;
+            padding: 5px;
+            border-radius: 5px;
+            display: block;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 20px;
+            font-family: Helvetica, Arial, sans-serif;;
+        }
+        #account{
+            border: none;
+            background-color: rgb(66,183,42);
+            width: 220px;
+            height: 46px;
+            color:white;
+            margin: auto;
+            margin-top: 35px;
+            padding: 10px;
+            border-radius: 5px;
+            display: block;
+            cursor: pointer;
+            text-decoration: none;
+            /* font-weight: bold; */
+            font-size: 16px;
+            font-family: Helvetica, Arial, sans-serif;
+
+        }
+        .new_account{
+            text-align: center;
+            font-family: Helvetica, Arial, sans-serif;
+            margin:auto;
+            margin-left: 300px;
+            padding: 110px 0px 0px 490px ;
+            width: 420px;
+            display: block;
+            font-size: 14px;
+
+
+        }
+        #f_pass{
+            color: rgb(24,119,242);
+            text-decoration: none;
+            font-size: 16.5px;
+            font-size: Helvetica, Arial, sans-serif;
+            margin:auto;
+            font-weight: 400;
+        }
+        #word{
+            display: block;
+            font-family: SFProDisplay-Regular, Helvetica, Arial, sans-serif;
+            margin-top:20px;
+            font-size: 28px;
+            font-weight: normal;
+            width: 500px;
+            margin-top: 150px;
+            padding-top: 0px;
+            padding-right: 22px;
+            margin-top:15px;
+            margin-left: 230px;
+        }
+        #photo{
+            margin:-28px;
+            margin-top:150px ;
+            height:109;
+            margin-left:200px;
+        }
+        #link{
+            text-decoration: none;
+            font-weight: bold;
+            color:black;
+        }
+        body{
+            background-color: rgb(240,242,245);
+        }
+        .line{
+            border-top:1px solid rgb(223,225,229);
+            opacity: 0.9;
+            width: 350px;
+            margin-top: 50px;
+            margin-left:830px ;
+        }
+        
+    </style>
+</head>
+<body>
+    <img id="photo" src="https://static.xx.fbcdn.net/rsrc.php/y8/r/dF5SId3UHWd.svg" alt="facebookIMG" width="300" height="106">
+    <h1 id="word">Facebook помогает вам всегда оставаться на связи и общаться со своими знакомыми.</h1>
+    <form action="">
+        <input type="text" placeholder="Электронный адрес или номер телефона" size="40" ><br>       
+        <input type="password" placeholder="Пароль" size="40" ><br>
+        <button type="submit">Вход</button><br>
+        <a href="https://ru-ru.facebook.com/login/identify/?ctx=recover&ars=facebook_login&from_login_screen=0" id="f_pass">Забыли пароль?</a><br>
+
+        <button id="account" type="Создать новый аккаунт">Создать новый аккаунт</button><br>
+
+    
+    </form>
+    <div class="line"></div>
+    <div class="new_account">    
+        <p><a href="https://ru-ru.facebook.com/pages/create/?ref_type=registration_form" id="link" ><strong>Создать Страницу </strong></a>знаменитости, музыкальной группы или компании.</p>
+    </div>
+</body>
+</html>
