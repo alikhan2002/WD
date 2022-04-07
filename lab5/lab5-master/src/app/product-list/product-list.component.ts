@@ -23,6 +23,7 @@ export class ProductListComponent implements OnInit {
   } 
   numberOfLikes : number = 0;
   
+  
   likeButtonClick() {
     this.numberOfLikes++;
   }
@@ -32,6 +33,7 @@ export class ProductListComponent implements OnInit {
    window.alert('Your product has been deleted!');
 
   }
+
 
 
 }
