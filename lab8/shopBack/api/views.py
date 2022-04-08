@@ -186,6 +186,11 @@ def category_item(request, id):
         if category['id'] == id:
             return JsonResponse(category)
     return JsonResponse({"message":"such category not found"})
+
+def productsByCategory(request, id):
+    res = [x for x in products if x['catID'] == id]
+            
+    return JsonResponse(res, safe = False)
     
 
 
