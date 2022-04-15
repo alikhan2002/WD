@@ -1,0 +1,24 @@
+input[type="range"] {
+    width: 150px; /* Full-width */
+    height: 25px; /* Specified height */
+    background: blue; /*Grey background*/
+    left:300px;
+    top:100px;
+    position: absolute;
+    display: block;
+
+}
+
+   input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -webkit-border-radius: 5px; 
+    /*16x16px adjusted to be same as 14x14px on moz*/
+     left:100px;
+    height: 16px;
+    width: 16px;
+    border-radius: 5px;
+    background: #de2a2a;
+    border: 1px solid #c5c5c5;
+  } 
+  

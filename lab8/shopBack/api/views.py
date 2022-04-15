@@ -39,12 +39,12 @@ def category_item(request, category_id):
 
 def productsByCategory(request, category_id):
     try:
-        categories = Product.objects.get(categoryId=category_id)
-        # category_json = [category.to_json() for category in categories]
+        categories = Product.objects.all().filter(category=category_id)
+        category_json = [category.to_json() for category in categories]
         # print(category_json)
     except Category.DoesNotExist as e:
         return JsonResponse({"message":str(e)}, status = 400)
-    return JsonResponse(categories, safe = False)
+    return JsonResponse(category_json, safe = False)
             
     
 
