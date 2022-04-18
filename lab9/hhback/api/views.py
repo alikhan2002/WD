@@ -3,7 +3,9 @@ from django.http import HttpResponse, JsonResponse
 from api.models import *
 from django.views.decorators.csrf import csrf_exempt
 
+import logging
 
+logger = logging.getLogger(__name__)
 def index(request):
     return HttpResponse("Привет, Мир!")
 
@@ -45,6 +47,7 @@ def companies_vacancy(request, company_id):
     try:
         vacancy = Vacancy.objects.all().filter(company_id=company_id)
         vacancy_json = [vac.to_json() for vac in vacancy]
+        print(vacancy_json)
     except Vacancy.DoesNotExist as e:
         return JsonResponse({"message": str(e)}, status=400)
 
