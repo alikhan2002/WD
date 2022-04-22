@@ -30,7 +30,7 @@ class CompaniesVacancy(APIView):
         return Response(serializer.errors)
 class Vacancies(APIView):
 
-    permission_classes = (IsAuthenticated,)
+    # permission_classes = (IsAuthenticated,)
 
     def get(self, request):
         vacancies = Vacancy.objects.all()

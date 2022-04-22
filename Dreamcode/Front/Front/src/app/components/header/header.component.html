@@ -1,0 +1,40 @@
+<div tabindex="0" class="dropdown">
+  <i class="fa fa-bars"><span>Catalog</span></i>
+<!--    <p>catalog</p>-->
+  <div class="dropdown-content">
+    <div class="row">
+        <a href="#"><h3><i class="fa fa-book" aria-hidden="true"></i>
+          Books</h3></a>
+        <a href="#"><h3><i class="fa fa-mobile" aria-hidden="true"></i>Smartphones</h3></a>
+        <a href="#"><h3><i class="fa fa-laptop" aria-hidden="true"></i>
+          Personal Computers</h3></a>
+        <a href="#"><h3><i class="material-icons" id="toys">toys</i> Toys</h3></a>
+        <a href="#"><h3><img src="/assets/img/dishes.png" alg="dishes" id="dishes"> Dishes</h3></a>
+        <a href="#"><h3><img src="https://cdn-icons-png.flaticon.com/512/46/46390.png" alg="kanz" id="kanz"> Stationery</h3></a>
+
+    </div>
+  </div>
+</div>
+
+<a [routerLink]="['/']">
+  <h1>DreamShop</h1>
+</a>
+<a routerLink="/cart" class="button fancy-button">
+  <i class="material-icons">shopping_cart</i>Checkout
+</a>
+<div class="login">
+  <a id="account"><i class="material-icons">account_circle</i></a>
+  <div class="log">
+    <div *ngIf="!logged" class="inp">
+      <h1>Login Form</h1>
+      <p>Username: <input type="text" [(ngModel)]="username"></p>
+      <p>Password: <input type="text" [(ngModel)]="password"></p>
+      <button (click)="login()"><span>Login</span></button>
+    </div>
+  </div>
+</div>
+
+<div class="search">
+  <input type="text" placeholder="" name="search">
+  <button type="submit" ><i class="material-icons">search</i></button>
+</div>

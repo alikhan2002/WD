@@ -1,0 +1,180 @@
+
+
+/*.search{*/
+/*  display: flex;*/
+/*  position: absolute;*/
+/*  left: 250px;*/
+/*  margin-top:15px;*/
+/*}*/
+
+
+/*.search input[type=text] {*/
+/*  padding: 10px;*/
+/*  font-size: 17px;*/
+/*  border: 1px  grey;*/
+/*  float: left;*/
+/*  width: 600px;*/
+/*  background: #f1f1f1;*/
+/*  border-bottom-left-radius: 10px;*/
+/*  border-top-left-radius: 10px;*/
+/*  border-right: none;*/
+/*  border-top-right-radius: 0px;*/
+/*  border-bottom-right-radius:0px ;*/
+/*}*/
+/*.search button{*/
+/*  !*padding: 2px 20px;*!*/
+/*  height: 40px;*/
+/*  color: rebeccapurple;*/
+/*  background: rgb(254,189,1);*/
+/*  float:right;*/
+/*  border-left: none;*/
+/*  border-bottom-left-radius:0px;*/
+/*  border-top-left-radius:0px;*/
+
+/*}*/
+/*.search button i.material-icons{*/
+/*  font-size: 25.3px;*/
+/*  float: left;*/
+/*}*/
+
+
+/*h1{*/
+  /*display: flex;*/
+  /*position: absolute;*/
+  /*left:100px*/
+/*}*/
+
+/**/
+.fa-bars{
+  display: flex;
+  color: white;
+  padding: 10px;
+  font-size: 30px;
+}
+.fa-bars span{
+  display: flex;
+  position: absolute;
+  font-size: 15px;
+  color: white;
+  text-transform: capitalize;
+  margin-top: 32px;
+  margin-left: -11px;
+  font-weight: 300;
+}
+
+.dropdown {
+  font-size: 12px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  /*background-color: inherit;*/
+  /*font: inherit;*/
+  margin: 0;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  width: 290px;
+  left: 10px;
+  margin-top:8px;
+  z-index: 1;
+  border: 1px solid gray;
+}
+.dropdown p{
+  display: inline;
+  position: absolute;
+  color:white;
+  float:bottom;
+  margin-bottom: 11px ;
+  text-transform: capitalize;
+
+}
+
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.row {
+  float: left;
+  background-color:white;
+  height: 405px;
+  margin: 5px ;
+}
+
+.row a {
+  float: none;
+  color: black;
+  padding: 10px;
+  text-decoration: none;
+  display: flex;
+  text-align: left;
+  width: 278px;
+}
+.row h3{
+  color:black;
+}
+
+.row a:hover {
+  background-color: orange;
+}
+
+.row i{
+  color:black;
+}
+
+#dishes{
+  width: 16px;
+}
+
+#kanz{
+  width: 17px;
+
+}
+#toys{
+  /*position: absolute;*/
+  float: left;
+  margin-top:-2px ;
+}
+.fa-mobile{
+  font-size: 17px;
+  margin-right: 3px;
+}
+
+.login:hover .log {
+  display: block;
+}
+
+.log {
+  display: none;
+  position: absolute;
+  background-color: white;
+  width: 260px;
+  right: 120px;
+  top:68px;
+  z-index: 0;
+  border: 1px solid gray;
+}
+.inp{
+  text-align: center;
+  padding: 10px;
+  margin-top:-40px;
+}
+.log h1{
+  color:black;
+  margin-top: 40px;
+  margin-left: 15px;
+}
+.log button{
+  border-radius: 10px;
+  width: 120px;
+  padding: 8px;
+}
+.log span{
+  text-align: center;
+  color: white;
+  margin-left: 30px;
+}
+
