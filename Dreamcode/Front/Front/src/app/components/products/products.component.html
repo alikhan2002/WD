@@ -1,28 +1,25 @@
 <div class="products">
     <div *ngFor="let product of products">
-      <a
-        [title]="product.name + ' details'"
-        [routerLink]="['/product', product.id]"
-      >
+
       <div class="column">
         <h3>
+          <a
+            [title]="product.name + ' details'"
+            [routerLink]="['/product', product.id]"
+          >
             <img [src]="product.img">
-
             <span id="text">
             {{ product.name }}
             </span>
-            <p id="price">{{product.price|currency}}</p>
-    <!--      <p>Description: {{product.description}}</p>-->
+          </a>
+          <p id="price">{{product.price|currency}}</p>
           <p id="rating">Rating: {{product.rating}}</p>
+          <a [href] = "'https://t.me/share/url?url='" id="share">
+            <button type="button">Share</button></a>
         </h3>
-
-        <!--
-          <app-product-alerts [product]="product" (notify)="onNotify()">
-          </app-product-alerts> -->
+        <div class="cart" (click)="addToCart(product)" >Add to cart</div>
       </div>
-      </a>
-      <a [href] = "'https://t.me/share/url?url='" id="share">
-        <button type="button">Share</button></a>
+
       <br><br>
 
     </div>
