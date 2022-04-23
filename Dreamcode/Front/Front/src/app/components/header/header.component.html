@@ -1,21 +1,18 @@
-<div tabindex="0" class="dropdown">
-  <i class="fa fa-bars"><span>Catalog</span></i>
-<!--    <p>catalog</p>-->
-  <div class="dropdown-content">
-    <div class="row">
-        <a href="#"><h3><i class="fa fa-book" aria-hidden="true"></i>
+    <div tabindex="0" class="dropdown">
+      <i class="fa fa-bars"><span>Catalog</span></i>
+    <div class="dropdown-content">
+      <div class="row">
+        <a title = "books" [routerLink]="['/category', 'books']"  ><h3><i class="fa fa-book" aria-hidden="true"></i>
           Books</h3></a>
-        <a href="#"><h3><i class="fa fa-mobile" aria-hidden="true"></i>Smartphones</h3></a>
-        <a href="#"><h3><i class="fa fa-laptop" aria-hidden="true"></i>
+        <a [routerLink]="['/category', 'smartphones']"><h3><i class="fa fa-mobile" aria-hidden="true"></i>Smartphones</h3></a>
+        <a routerLink="/category/pc"><h3><i class="fa fa-laptop" aria-hidden="true"></i>
           Personal Computers</h3></a>
-        <a href="#"><h3><i class="material-icons" id="toys">toys</i> Toys</h3></a>
-        <a href="#"><h3><img src="/assets/img/dishes.png" alg="dishes" id="dishes"> Dishes</h3></a>
-        <a href="#"><h3><img src="https://cdn-icons-png.flaticon.com/512/46/46390.png" alg="kanz" id="kanz"> Stationery</h3></a>
-
+        <a routerLink="/category/toys"><h3><i class="material-icons" id="toys">toys</i> Toys</h3></a>
+        <a routerLink="/category/dishes"><h3><img src="/assets/img/dishes.png" alg="dishes" id="dishes"> Dishes</h3></a>
+        <a routerLink="/category/stationery"><h3><img src="https://cdn-icons-png.flaticon.com/512/46/46390.png" alg="kanz" id="kanz"> Stationery</h3></a>
     </div>
   </div>
 </div>
-
 <a [routerLink]="['/']">
   <h1>DreamShop</h1>
 </a>

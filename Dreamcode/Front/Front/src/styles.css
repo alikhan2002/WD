@@ -16,16 +16,12 @@ body {
 
 
 .container {
-  display: flex;
-  flex-direction: row;
   min-height: 100%;
-
-
 }
 
-router-outlet + *  {
-  padding: 0 16px;
-}
+/*router-outlet + *  {*/
+/*  padding: 0 16px;*/
+/*}*/
 
 /* Text */
 
@@ -52,13 +48,10 @@ p {
 
 a {
   cursor: pointer;
-  color: #556270;
   text-decoration: none;
 }
 
-a:hover {
-  opacity: 0.8;
-}
+
 
 /* Input */
 

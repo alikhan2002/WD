@@ -9,7 +9,6 @@ import {CategoryService} from "../../category.service";
 export class HeaderComponent implements OnInit {
 
   title = 'hhfront';
-
   logged = false;
   username = "";
   password = "";
@@ -24,7 +23,6 @@ export class HeaderComponent implements OnInit {
   login() {
     this.companyService.login(this.username, this.password).subscribe((data)=>{
       localStorage.setItem('token', data.token)
-
       this.logged=true;
       this.username='';
       this.password='';
@@ -34,4 +32,9 @@ export class HeaderComponent implements OnInit {
     this.logged=false;
     localStorage.removeItem('token');
   }
+
+  update(){
+    window.location.reload();
+  }
+
 }

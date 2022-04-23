@@ -5,14 +5,14 @@ import {ProductsComponent} from "./components/products/products.component";
 import {ProductitemComponent} from "./components/productitem/productitem.component";
 import {CartComponent} from "./components/cart/cart.component";
 import {ShippingComponent} from "./components/shipping/shipping.component";
+import {CategoriesComponent} from "./components/categories/categories.component";
 
 const routes: Routes = [
   {path: '', component:HomeComponent},
-  {path:'products', component: ProductsComponent},
-  { path: 'products/:productId', component: ProductitemComponent },
   { path: 'cart', component: CartComponent },
   { path: 'shipping', component: ShippingComponent },
-
+  {path:'category/:name', component: ProductsComponent},
+  {path:'product/:id', component: ProductitemComponent},
 
 ];
 
