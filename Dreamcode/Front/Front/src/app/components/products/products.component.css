@@ -42,7 +42,7 @@
   width: 300px;
   height: 370px;
   margin: 10px;
-  box-shadow: 0 0 1.5px 0 rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0px 5px 0px rgba(0, 0, 0, 0.5);
   z-index: 0;
 }
 
@@ -50,9 +50,10 @@
   display:flex ;
   position: relative;
   padding-bottom: 70px;
-  height: 380px;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.5);
   border-bottom: none;
+  border-bottom-left-radius:0px ;
+  border-bottom-right-radius:0px ;
 }
 
 #price{
@@ -85,5 +86,20 @@
 }
 
 
+ .sort{
+   display: block;
+   position: absolute;
+   right: 150px;
+   margin-top: 10px;
+   border:none;
+ }
+ #choose_order{
+   width: 230px !important;
+  font-size: 18px;
+   border:none;
+   border-radius: 6px;
+   box-shadow: 0 0 1.5px 0 rgba(0, 0, 0, 0.5);
+   height: 30px;
+ }
 
 
