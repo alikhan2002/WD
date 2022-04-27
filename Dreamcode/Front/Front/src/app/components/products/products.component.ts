@@ -29,8 +29,11 @@ export class ProductsComponent implements OnInit {
       console.log(this.products)
     })
   }
+  total:number=0;
   addToCart(product: Product) {
     this.cartService.addToCart(product);
-    window.alert('Your product has been added to the cart!');
+    this.total += product['price'];
+    console.log(this.total)
+    // window.alert('Your product has been added to the cart!');
   }
 }

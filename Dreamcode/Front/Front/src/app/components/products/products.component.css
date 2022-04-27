@@ -31,7 +31,7 @@
   flex-wrap: wrap;
   left: 200px;
   width: 1300px;
-  top:35px;
+  top:50px;
   /*margin: auto;*/
   text-align: center;
 }
@@ -87,11 +87,16 @@
 
 
  .sort{
-   display: block;
+   display: flex;
    position: absolute;
    right: 150px;
    margin-top: 10px;
    border:none;
+ }
+ .sort p{
+   margin-top: 5px !important;
+   margin:10px;
+   font-size: 20px;
  }
  #choose_order{
    width: 230px !important;

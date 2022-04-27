@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {CartService} from "../cart.service";
+import {Product} from "../../models";
 
 
 @Component({
@@ -10,8 +11,8 @@ import {CartService} from "../cart.service";
 export class CartComponent  {
 
   items = this.cartService.getItems();
+  total = this.cartService.getTotal();
 
   constructor(private cartService: CartService) { }
-
 
 }
