@@ -14,6 +14,7 @@ import { CartComponent } from './components/cart/cart.component';
 import { ShippingComponent } from './components/shipping/shipping.component';
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {AuthInterceptor} from "./AuthInterceptor";
+import { NotFoundComponent } from './components/not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import {AuthInterceptor} from "./AuthInterceptor";
     ProductitemComponent,
     CartComponent,
     ShippingComponent,
+    NotFoundComponent,
   ],
   imports: [
     BrowserModule,

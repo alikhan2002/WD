@@ -1,0 +1,15 @@
+#total{
+  position: absolute;
+  left:400px;
+}
+.cart-item{
+  display: block;
+  /*position: absolute;*/
+  background-color: rgb(0,149,246);
+
+  left: 30px !important;
+  margin: 20px  ;
+}
+.cart-item p, span{
+  color:black;
+}

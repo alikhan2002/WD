@@ -3,10 +3,11 @@
 <p>
   <a routerLink="/shipping">Shipping Prices</a>
 </p>
-<p>{{total}}</p>
+
 <div class="cart-item" *ngFor="let item of items">
   <span>{{ item.name }}</span>
-  <span >{{ item.price | currency }}</span>
+  <p>{{ item.price | currency }}</p>
 
 </div>
 <button (click)="clearCart()">Clear Cart</button>
+<p id="total">Total: {{total}}</p>
