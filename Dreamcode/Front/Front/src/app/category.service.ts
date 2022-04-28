@@ -12,7 +12,7 @@ export class CategoryService {
   constructor(private http: HttpClient) { }
 
   login(username: string, password: string): Observable<AuthToken> {
-    return this.http.post<AuthToken>(`${this.BASE_URL}/api/login/`, {
+    return this.http.post<AuthToken>(`${this.BASE_URL}/app/login/`, {
       username,
       password
     });
@@ -20,6 +20,6 @@ export class CategoryService {
 
 
   getCompany(): Observable<Category[]>{
-    return this.http.get<Category[]>(`${this.BASE_URL}/api/companies/`);
+    return this.http.get<Category[]>(`${this.BASE_URL}/app/companies/`);
   }
 }

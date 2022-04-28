@@ -1,0 +1,6 @@
+.item{
+  display: flex;
+  position: absolute;
+  left: 400px;
+  width: 400px;
+}

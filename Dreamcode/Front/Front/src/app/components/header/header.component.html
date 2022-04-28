@@ -1,4 +1,5 @@
-    <div tabindex="0" class="dropdown">
+
+<div tabindex="0" class="dropdown">
       <i class="fa fa-bars"><span>Catalog</span></i>
     <div class="dropdown-content">
       <div class="row">
@@ -19,14 +20,17 @@
 <a routerLink="/cart" class="button fancy-button">
   <i class="material-icons">shopping_cart</i>Checkout
 </a>
-<div class="login">
-  <a id="account"><i class="material-icons">account_circle</i></a>
-  <div class="log">
+<div class="login" >
+    <a id="account" ><i class="material-icons">account_circle</i></a>
+  <div class="log"  >
     <div *ngIf="!logged" class="inp">
       <h1>Login Form</h1>
       <p>Username: <input type="text" [(ngModel)]="username"></p>
       <p>Password: <input type="text" [(ngModel)]="password"></p>
-      <button (click)="login()"><span>Login</span></button>
+      <button (click)="login()"><span id="l">Login</span></button>
+    </div>
+    <div *ngIf="logged" >
+      <button (click)="logout()" id="out">Logout</button>
     </div>
   </div>
 </div>
@@ -35,3 +39,10 @@
   <input type="text" placeholder="" name="search">
   <button type="submit" ><i class="material-icons">search</i></button>
 </div>
+
+<script >
+  function myFunction() {
+    document.getElementById("log").style.display = "block";
+  }
+
+</script>

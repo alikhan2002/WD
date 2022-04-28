@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {Observable} from "rxjs";
-import {Product} from "./models";
+import {AuthToken, Category, Product} from "./models";
 import {HttpClient} from "@angular/common/http";
 
 @Injectable({
@@ -8,10 +8,16 @@ import {HttpClient} from "@angular/common/http";
 })
 export class ProductService {
 
-  BASE_URL = 'https://fakestoreapi.com/products';
+  BASE_URL = 'http://localhost:8000';
   constructor(private http: HttpClient) { }
 
+  login(username: string, password: string): Observable<AuthToken> {
+    return this.http.post<AuthToken>(`${this.BASE_URL}/app/login/`, {
+      username,
+      password
+    });
+  }
   getProduct(): Observable<Product[]>{
-    return this.http.get<Product[]>(`${this.BASE_URL}`);
+    return this.http.get<Product[]>(`${this.BASE_URL}/app/products/`);
   }
 }

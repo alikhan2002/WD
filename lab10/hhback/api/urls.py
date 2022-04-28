@@ -13,3 +13,4 @@ urlpatterns = [
 
     path('login/', obtain_jwt_token)
 ]
+    

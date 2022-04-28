@@ -13,5 +13,5 @@ export class VacancyService {
 
   getVacancy(): Observable<Vacancy[]>{
     return this.http.get<Vacancy[]>(`${this.BASE_URL}/api/vacancy`);
-  }
+  } 
 }

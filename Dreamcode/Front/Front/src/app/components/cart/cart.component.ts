@@ -13,6 +13,11 @@ export class CartComponent  {
   items = this.cartService.getItems();
   total = this.cartService.getTotal();
 
-  constructor(private cartService: CartService) { }
+  constructor(private cartService: CartService) {
+
+  }
+  clearCart(){
+    this.cartService.clearCart();
+  }
 
 }
