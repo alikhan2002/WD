@@ -14,10 +14,10 @@ class Category(models.Model):
 
 class Product(models.Model):
     name = models.CharField(max_length=1000)
-    price = models.IntegerField()
+    price = models.FloatField()
     description = models.TextField()
     img = models.TextField()
-    rating = models.IntegerField()
+    rating = models.FloatField()
     catName = models.CharField(max_length=500)
     def to_json(self):
         return {

@@ -39,7 +39,7 @@ def products(request):
         except Exception as e:
             return JsonResponse({'message': str(e)})
 
-    return JsonResponse(Product.to_json(), safe=False)
+    return JsonResponse(product.to_json(), safe=False)
 
 @csrf_exempt
 def product_item(request, Product_id):

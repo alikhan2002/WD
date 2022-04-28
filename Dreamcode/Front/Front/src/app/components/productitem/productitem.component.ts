@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import {Product, products} from "../../models";
 import {ActivatedRoute} from "@angular/router";
 import { CartService } from '../cart.service';
+import {ProductService} from "../../product.service";
+import {Product} from "../../models";
 
 
 @Component({
@@ -10,21 +11,33 @@ import { CartService } from '../cart.service';
   styleUrls: ['./productitem.component.css']
 })
 export class ProductitemComponent implements OnInit {
-  product: Product | undefined;
+  products: Product[] = [];
+  product: Product|undefined;
   constructor(private route: ActivatedRoute,
-              private cartService: CartService) { }
-  ngOnInit() {
-    // First get the product id from the current route.
-    const routeParams = this.route.snapshot.paramMap;
-    const productIdFromRoute = Number(routeParams.get('id'));
-
-    // Find the product that correspond with the id provided in route.
-    this.product = products.find(product => product.id === productIdFromRoute);
+              private cartService: CartService,
+              private productService: ProductService) {
   }
 
+  ngOnInit() {
+    this.getProductItem();
+    console.log(this.products)
+  }
+  total:number=0;
   addToCart(product: Product) {
     this.cartService.addToCart(product);
-    window.alert('Your product has been added to the cart!');
+    this.total += product['price'];
+
+  }
+  getProductItem() {
+    this.productService.getProduct().subscribe((data) => {
+      this.route.paramMap.subscribe((params) => {
+        // @ts-ignore
+        const id = +params.get('id');
+        this.products = data.filter(el => el.id === id);
+        this.product = this.products[0];
+        // console.log(this.product)
+      })
+    })
   }
 
 

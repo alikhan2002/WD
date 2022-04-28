@@ -12,7 +12,7 @@ import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 import { ProductitemComponent } from './components/productitem/productitem.component';
 import { CartComponent } from './components/cart/cart.component';
 import { ShippingComponent } from './components/shipping/shipping.component';
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {AuthInterceptor} from "./AuthInterceptor";
 
 @NgModule({
@@ -27,12 +27,13 @@ import {AuthInterceptor} from "./AuthInterceptor";
     CartComponent,
     ShippingComponent,
   ],
-    imports: [
-        BrowserModule,
-        AppRoutingModule,
-        HttpClientModule,
-        FormsModule
-    ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
+  ],
   providers: [
     {
       provide: HTTP_INTERCEPTORS,

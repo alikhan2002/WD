@@ -30,8 +30,7 @@
               "src/styles.css"
             ],
             "scripts": [
-              "src/assets/search_bar.js",
-              "srs/assets/js/1.js"
+              "src/assets/search_bar.js"
             ]
           },
           "configurations": {

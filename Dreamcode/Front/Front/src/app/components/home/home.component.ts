@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {categories} from "../../models";
 
 @Component({
   selector: 'app-home',
@@ -10,5 +9,4 @@ export class HomeComponent{
 
   constructor() { }
 
-  categories=categories
 }

@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {categories} from "../../models";
 
 @Component({
   selector: 'app-categories',
@@ -10,6 +9,5 @@ export class CategoriesComponent {
 
   constructor() { }
 
-  categories=categories
 
 }
