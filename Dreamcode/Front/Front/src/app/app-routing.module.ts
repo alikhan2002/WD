@@ -8,6 +8,8 @@ import {CartComponent} from "./components/cart/cart.component";
 import {ShippingComponent} from "./components/shipping/shipping.component";
 import {CategoriesComponent} from "./components/categories/categories.component";
 import {NotFoundComponent} from "./components/not-found/not-found.component";
+import {LoginComponent} from "./components/login/login.component";
+import {SignupComponent} from "./components/signup/signup.component";
 
 const routes: Routes = [
   // {path: '', component:HomeComponent},
@@ -15,8 +17,11 @@ const routes: Routes = [
   { path: 'shipping', component: ShippingComponent },
   {path:'category/:name', component: ProductsComponent},
   {path:'product/:id', component: ProductitemComponent},
-  {path: '', redirectTo: 'category/pc', pathMatch: 'full'},
+  { path: 'login', component: LoginComponent },
+  { path: 'signup', component: SignupComponent },
+  {path: '', redirectTo: 'login', pathMatch: 'full'},
   {path: '**', component: NotFoundComponent},
+
 
 ];
 

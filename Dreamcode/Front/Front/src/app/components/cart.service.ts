@@ -16,6 +16,7 @@ export class CartService {
   addToCart(product: Product) {
     this.items.push(product);
     this.total+=product['price'];
+
   }
   getTotal(){
     return this.total;

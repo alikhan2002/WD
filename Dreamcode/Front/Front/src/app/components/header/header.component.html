@@ -12,35 +12,17 @@
     </div>
   </div>
 </div>
-<a [routerLink]="['/']">
+<a [routerLink]="['/category', 'pc']">
   <h1>DreamShop</h1>
 </a>
 <a routerLink="/cart" class="button fancy-button">
   <i class="material-icons">shopping_cart</i>Checkout
 </a>
 <div class="login" >
-    <a id="account" ><i class="material-icons">account_circle</i></a>
-  <div class="log"  >
-    <div *ngIf="!logged" class="inp">
-      <h1>Login Form</h1>
-      <p>Username: <input type="text" [(ngModel)]="username"></p>
-      <p>Password: <input type="text" [(ngModel)]="password"></p>
-      <button (click)="login()"><span id="l">Login</span></button>
-    </div>
-    <div *ngIf="logged" >
-      <button (click)="logout()" id="out">Logout</button>
-    </div>
-  </div>
+    <a id="account" [routerLink]="['/login']"><i class="material-icons">account_circle</i></a>
 </div>
 
 <div class="search">
   <input type="text" placeholder="" name="search">
   <button type="submit" ><i class="material-icons">search</i></button>
 </div>
-
-<script >
-  function myFunction() {
-    document.getElementById("log").style.display = "block";
-  }
-
-</script>

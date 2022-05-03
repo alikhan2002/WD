@@ -8,5 +8,6 @@ urlpatterns = [
     path('', index),
     path('category/pk', CategoryProduct.as_view()),
     path('products/', Products.as_view()),
-    path('login/', obtain_jwt_token)
+    path('login/', obtain_jwt_token),
+    path('user/', users)
 ]

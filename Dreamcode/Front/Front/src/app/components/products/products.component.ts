@@ -26,16 +26,13 @@ export class ProductsComponent implements OnInit {
   addToCart(product: Product) {
     this.cartService.addToCart(product);
     this.total += product['price'];
-    console.log(this.total)
+    console.log(this.total);
 
   }
   getProduct() {
     this.productService.getProduct().subscribe((data) => {
-      // this.vacancies = data;
-      // console.log("works")
       console.log(data);
       this.route.paramMap.subscribe((params) => {
-        // @ts-ignore
         const id = String(params.get('name'));
         // console.log(id);
         this.products = data.filter(el => el.catName === id);

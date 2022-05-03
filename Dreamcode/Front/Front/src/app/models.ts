@@ -13,6 +13,16 @@ export interface Category{
   icon:string;
 }
 
+export interface User{
+  id: number;
+  name: string;
+  surname: string;
+  email:string;
+  phone:string;
+  password:string;
+}
+
+
 export interface AuthToken {
   token: string;
 }

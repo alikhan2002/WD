@@ -17,7 +17,9 @@ export class CartComponent  {
 
   }
   clearCart(){
-    this.cartService.clearCart();
+    this.items =[];
+    this.total = 0;
+    // this.cartService.clearCart();
   }
 
 }

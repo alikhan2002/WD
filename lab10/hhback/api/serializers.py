@@ -12,7 +12,7 @@ class CompanySerializer(serializers.Serializer):
         instance.name = validated_data.get('name')
         instance.save()
         return instance
-
+k
 
 
 
