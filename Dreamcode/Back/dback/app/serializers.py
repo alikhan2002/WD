@@ -14,6 +14,8 @@ class ProductSerializer(serializers.ModelSerializer):
         fields = '__all__'
         read_only_fields = ('id',)
 
+
+
 class PersonSerializer(serializers.Serializer):
     id = serializers.IntegerField(read_only=True)
     username = serializers.CharField(max_length=300)
@@ -33,16 +35,34 @@ class PersonSerializer(serializers.Serializer):
         return user
 
 
-class CompanySerializer(serializers.Serializer):
+
+class ShippingSerializer(serializers.Serializer):
     id = serializers.IntegerField(read_only=True)
-    name = serializers.CharField(max_length=200)
+    fullname = serializers.CharField(max_length=600)
+    shipping_type = serializers.CharField(max_length=40)
+    address = serializers.CharField(max_length=300)
+    user_id = serializers.IntegerField()
+
 
     def create(self, validated_data):
-        company = Company.objects.create(name=validated_data.get('name'))
-        return company
+        ship = Shipping.objects.create(fullname=validated_data['fullname'],
+                                   shipping_type=validated_data['shipping_type'],
+                                   address=validated_data['address'],
+                                    user_id=validated_data['user_id'])
+        return ship
+
+    def retrieve(self):
+        ship = Shipping.objects.all()
+        return ship
 
     def update(self, instance, validated_data):
-        instance.name = validated_data.get('name')
+        instance.fullname = validated_data['fullname']
+        instance.shipping_type = validated_data['shipping_type']
+        instance.address = validated_data['address']
         instance.save()
         return instance
+
+
+
+
 

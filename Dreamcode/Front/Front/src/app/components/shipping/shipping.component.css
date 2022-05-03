@@ -1,4 +1,8 @@
 .shipping{
   position:absolute;
-  left:100px
+  left:100px;
+  width:300px;
+}
+.shipping input{
+  width: 300px;
 }

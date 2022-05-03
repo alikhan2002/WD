@@ -37,6 +37,7 @@ class Products(APIView):
         serializer = ProductSerializer(products, many=True)
         return Response(serializer.data, status=status.HTTP_200_OK)
 
+    #CREATE
     def post(self, request):
         serializer = ProductSerializer(data=request.data)
         if serializer.is_valid():
@@ -54,11 +55,13 @@ class ProductItem(APIView):
         except Product.DoesNotExist as e:
             raise Http404
 
+    #RETRIEVE
     def get(self, request, pk=None):
         product = self.get_object(pk)
         serializer = ProductSerializer(product)
         return Response(serializer.data,status=status.HTTP_200_OK)
 
+    #UPDATE
     def put(self, request, pk=None):
         product = self.get_object(pk)
         serializer = ProductSerializer(instance=product, data=request.data)
@@ -67,8 +70,10 @@ class ProductItem(APIView):
             return Response(serializer.data,status=status.HTTP_200_OK)
         return Response(serializer.errors)
 
+    #DELETE
     def delete(self, request, pk=None):
         product = self.get_object(pk)
         product.delete()
         return Response({"message":"succesfully deleted"}, status=204)
+
 

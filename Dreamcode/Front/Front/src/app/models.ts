@@ -15,11 +15,16 @@ export interface Category{
 
 export interface User{
   id: number;
-  name: string;
-  surname: string;
+  username: string;
   email:string;
-  phone:string;
   password:string;
+}
+export interface Shipping{
+  id: number;
+  fullname:string;
+  address:string;
+  shipping_type:string;
+  user_id:string;
 }
 
 

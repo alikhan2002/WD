@@ -32,26 +32,38 @@ def users(request):
             return Response(serializer.data)
         return Response(serializer.errors)
 
-# @api_view(['GET', 'PUT', 'DELETE'])
-# def companies_item(request, pk):
-#     try:
-#         company = Company.objects.get(id=pk)
-#     except Company.DoesNotExist as e:
-#         return Response({"message": str(e)}, status=400)
-#
-#     if request.method == 'GET':
-#         serializer = CompanySerializer(company)
-#         return Response(serializer.data)
-#     elif request.method == 'PUT':
-#         data = json.loads(request.body)
-#         serializer = CompanySerializer(instance=company, data=data)
-#         if serializer.is_valid():
-#             serializer.save()
-#             return Response(serializer.data)
-#         return Response(serializer.errors)
-#     elif request.method == 'DELETE':
-#         company.delete()
-#         return Response({'message': 'deleted'}, status=204)
+@api_view(['GET', 'PUT', 'DELETE'])
+def user_item(request, pk):
+    try:
+        person = Person.objects.get(id=pk)
+    except Person.DoesNotExist as e:
+        return Response({"message": str(e)}, status=400)
 
+    if request.method == 'GET':
+        serializer = PersonSerializer(person)
+        return Response(serializer.data)
+    elif request.method == 'PUT':
+        data = json.loads(request.body)
+        serializer = PersonSerializer(instance=person, data=data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data)
+        return Response(serializer.errors)
+    elif request.method == 'DELETE':
+        person.delete()
+        return Response({'message': 'deleted'}, status=204)
 
+@api_view(['GET', 'POST'])
+def shipping(request):
+    if request.method == 'GET':
+        shippings = Shipping.objects.all()
+        serializer = ShippingSerializer(shippings, many=True)
+        return Response(serializer.data)
+    elif request.method == 'POST':
+        data = json.loads(request.body)
+        serializer = ShippingSerializer(data=data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data)
+        return Response(serializer.errors)
 

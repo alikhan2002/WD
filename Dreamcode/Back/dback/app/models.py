@@ -48,7 +48,7 @@ class Person(models.Model):
     password = models.CharField(max_length=100)
 
 class Shipping(models.Model):
-    fullName = models.CharField(max_length=400)
+    fullname = models.CharField(max_length=400)
     shipping_type = models.CharField(max_length=30)
     address = models.CharField(max_length=300)
     user = models.ForeignKey(
@@ -58,7 +58,8 @@ class Shipping(models.Model):
     def to_json(self):
         return {
             'id': self.id,
-            'fullName': self.fullName,
+            'fullName': self.fullname,
             'shipping_type': self.shipping_type,
-            'address': self.address
+            'address': self.address,
+            'user': self.user_id
         }

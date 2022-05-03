@@ -20,4 +20,6 @@ export class ProductService {
   getProduct(): Observable<Product[]>{
     return this.http.get<Product[]>(`${this.BASE_URL}/app/products/`);
   }
+
+
 }

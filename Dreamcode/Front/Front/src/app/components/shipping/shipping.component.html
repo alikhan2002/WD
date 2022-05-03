@@ -6,14 +6,11 @@
     <span>{{ shipping.price | currency }}</span>
   </div>
 
-    <div>
-      <p>Name: <input type="text" [(ngModel)]="name"></p>
-    </div>
+    <p>Fullname: <input type="text" [(ngModel)]="fullname"></p>
+    <p>Address: <input type="text" [(ngModel)]="address"></p>
+    <p>Type: <input type="text" [(ngModel)]="shipping_type"></p>
 
-    <div>
-      <p>Address: <input type="text" [(ngModel)]="address"></p>
-    </div>
 
-    <button class="button" type="submit" (click)="onSubmit()">Purchase</button>
+  <button class="button" type="submit" (click)="purchase()">Purchase</button>
 
 </div>
