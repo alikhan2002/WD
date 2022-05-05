@@ -30,8 +30,7 @@ class CategoryProduct(APIView):
         return Response(serializer.errors)
 class Products(APIView):
 
-    permission_classes = (IsAuthenticated,)
-
+    permission_classes = (IsAuthenticated, )
     def get(self, request):
         products = Product.objects.all()
         serializer = ProductSerializer(products, many=True)

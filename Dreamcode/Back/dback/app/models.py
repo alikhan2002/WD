@@ -36,9 +36,6 @@ class Product(models.Model):
             'cat_id': self.cat_id
         }
 
-
-
-
 class Person(models.Model):
     username = models.CharField(max_length=200)
     name = models.CharField(max_length=100)

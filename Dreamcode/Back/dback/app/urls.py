@@ -6,7 +6,7 @@ from app.views import index
 
 urlpatterns = [
     path('', index),
-    path('category/pk', CategoryProduct.as_view()),
+    path('category/<int:pk>/', CategoryProduct.as_view()),
     path('products/', Products.as_view()),
     path('products/crud/', Products.as_view()),
     path('products/crud/<int:pk>', ProductItem.as_view()),

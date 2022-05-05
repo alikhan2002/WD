@@ -34,6 +34,17 @@ class PersonSerializer(serializers.Serializer):
                                    password=validated_data['password'])
         return user
 
+    def update(self, instance, validated_data):
+        instance.username = validated_data['username']
+        instance.name = validated_data['name']
+        instance.surname = validated_data['surname']
+        instance.phone_number = validated_data['phone_number']
+        instance.e_mail = validated_data['e_mail']
+        instance.password = validated_data['password']
+        instance.save()
+        return instance
+
+
 
 
 class ShippingSerializer(serializers.Serializer):
