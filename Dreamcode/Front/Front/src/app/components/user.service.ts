@@ -21,6 +21,23 @@ export class UserService{
       password
     });
   }
+  putItem(name: string, price:number, description:string, img: string, rating:number, catName:string, id: number, cat_id: number): Observable<any>{
+    console.log(id);
+    return this.http.put(`http://127.0.0.1:8000/app/products/crud/${id}`, {
+      name,
+      price,
+      description,
+      img,
+      rating,
+      catName,
+      cat_id
+    });
+  }
+
+ getUsers(): Observable<any>{
+   return this.http.get<any>(`http://127.0.0.1:8000/admin/auth/user/`);
+
+ }
   getUser(): Observable<User[]>{
     return this.http.get<User[]>(`${this.BASE_URL}/app/user/`);
   }

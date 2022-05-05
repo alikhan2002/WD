@@ -14,14 +14,17 @@ export class LoginComponent implements OnInit {
   logged = false;
   username = "";
   password = "";
-  user: User|undefined;
+  user = "";
   ngOnInit() {
     const token = localStorage.getItem('token')
     if (token) {
       this.logged = true;
+      // @ts-ignore
+      this.user = localStorage.getItem('username');
+      console.log(this.user);
     }
-    this.getUser();
-
+    // this.getUser();
+    this.getUsers();
   }
 
   constructor(private productService: ProductService,
@@ -39,6 +42,7 @@ export class LoginComponent implements OnInit {
       this.password = '';
       if(this.logged) {
         this.onSubmit();
+
       }
     });
   }
@@ -54,6 +58,11 @@ export class LoginComponent implements OnInit {
   }
   getUser() {
     this.userService.getUser().subscribe((data)=> {
+      console.log(data);
+    })
+  }
+  getUsers(){
+    this.userService.getUsers().subscribe((data)=>{
       console.log(data);
     })
   }

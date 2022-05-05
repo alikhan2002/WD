@@ -1,0 +1,34 @@
+<!--<div class="sort">-->
+<!--  <p>Sort by: </p>-->
+<!--  <select name="choose_order" id="choose_order">-->
+<!--    <option value="asc">Ascending</option>-->
+<!--    <option value="desc">Descending</option>-->
+<!--  </select>-->
+<!--</div>-->
+<a routerLink="post"><button id="post">ADD</button></a>
+<div class="products">
+  <div *ngFor="let product of products">
+
+    <div class="column">
+      <h3>
+
+          <img [src]="product.img">
+          <span id="text">
+            {{ product.name }}
+            </span>
+        <p id="price">{{product.price|currency}}</p>
+        <p id="rating">Rating: {{product.rating}}</p>
+        <div class="ed">
+          <a
+            [title]="product.name + ' details'"
+            [routerLink]="['/crud', product.id]"
+          >
+          <button id="edit">Edit</button>
+          </a>
+          <button id="delete" (click)="deleteItem(product.id)">Delete</button>
+        </div>
+      </h3>
+    </div>
+
+  </div>
+</div>

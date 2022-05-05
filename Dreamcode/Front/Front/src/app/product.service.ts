@@ -17,9 +17,20 @@ export class ProductService {
       password
     });
   }
+
   getProduct(): Observable<Product[]>{
     return this.http.get<Product[]>(`${this.BASE_URL}/app/products/`);
   }
-
+  postItem(name: string, price: number, description: string, img: string, rating: number, cat_id: number, catName: string): Observable<Product> {
+    return this.http.post<Product>(`${this.BASE_URL}/app/products/`, {
+      name,
+      price,
+      description,
+      img,
+      rating,
+      catName,
+      cat_id,
+    });
+  }
 
 }

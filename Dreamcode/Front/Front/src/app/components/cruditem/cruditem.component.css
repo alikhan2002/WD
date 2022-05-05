@@ -1,0 +1,73 @@
+.edit {
+  display: block ;
+  position: absolute;
+  background-color: white;
+  width: 800px;
+  height:600px;
+  left: 50px;
+  top:100px;
+  border: 1px solid gray;
+}
+.row{
+  margin-left: 20px;
+}
+.inp{
+  text-align: center;
+  padding: 10px;
+  margin-top:40px;
+}
+.edit h1{
+  color:black;
+  margin-top: 20px;
+  left:90px;
+}
+#signup{
+  position: absolute;
+  margin-top: 50px;
+  left: 170px;
+  text-decoration: underline;
+}
+.edit button{
+  border-radius: 10px;
+  width: 120px;
+  padding: 8px;
+}
+#l{
+  text-align: center;
+  color: white;
+  margin-left: 30px;
+}
+
+.edit input{
+  margin-top: 10px;
+  width: 750px;
+  height: 100px;
+}
+
+#up{
+  position: absolute;
+  right: 50px;
+  bottom: 10px;
+  margin-bottom: 10px;
+  padding-left: 35px;
+}
+#price{
+  width: 200px;
+  height: 30px;
+}
+#name{
+  width: 700px;
+  height: 60px;
+}
+#description{
+  width: 650px;
+  height: 30px;
+}
+#rating{
+  width: 50px;
+  height: 30px;
+}
+#catname{
+  width: 400px;
+  height: 30px;
+}

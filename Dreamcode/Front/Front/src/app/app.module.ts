@@ -17,6 +17,9 @@ import {AuthInterceptor} from "./AuthInterceptor";
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { LoginComponent } from './components/login/login.component';
 import { SignupComponent } from './components/signup/signup.component';
+import { CrudComponent } from './components/crud/crud.component';
+import { CruditemComponent } from './components/cruditem/cruditem.component';
+import { PostComponent } from './components/post/post.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +35,9 @@ import { SignupComponent } from './components/signup/signup.component';
     NotFoundComponent,
     LoginComponent,
     SignupComponent,
+    CrudComponent,
+    CruditemComponent,
+    PostComponent,
   ],
   imports: [
     BrowserModule,

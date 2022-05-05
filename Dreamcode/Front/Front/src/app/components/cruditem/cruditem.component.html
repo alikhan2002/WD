@@ -1,0 +1,13 @@
+<div class="edit" *ngIf="product">
+  <div class="row">
+    <p>Name: <input type="text" id="name" [(ngModel)]="name"></p>
+    <p >Price: <input type="number" id="price" [(ngModel)]="price"></p>
+    <p>Description: <input type="text"id="description" [(ngModel)]="description"></p>
+    <p>img: <input type="text" id="img" [(ngModel)]="img"></p>
+    <p>rating: <input type="number" id="rating" [(ngModel)]="rating"></p>
+    <p>catname: <input type="text" id="catname" [(ngModel)]="catName"></p>
+    <p>cat_id: <input type="text" id="catname" [(ngModel)]="cat_id"></p>
+    <button  id="up" (click)="putItem()">Edit</button>
+  </div>
+</div>
+a
